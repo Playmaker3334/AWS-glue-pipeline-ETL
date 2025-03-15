@@ -37,7 +37,7 @@ This repository demonstrates an **ETL (Extract, Transform, Load)** pipeline usin
 1. **Create S3 Buckets**  
    - A *source* bucket for raw data (e.g., `cloud-source-origin`).  
    - A *target* bucket for storing transformed data (e.g., `cloud-target-origin`).  
-   - (Optionally) another bucket that AWS Glue might use for assets/scripts.
+   - Another bucket that AWS Glue might use for assets/scripts.
 
 2. **Upload CSVs to Source Bucket**  
    - Place `sales.csv` and `products.csv` in the *source* bucket.
@@ -58,7 +58,7 @@ This repository demonstrates an **ETL (Extract, Transform, Load)** pipeline usin
      4. Calculate additional fields, e.g. `total_amount = quantity * price`.  
      5. Write the results in **Parquet** to your *target* S3 bucket.  
 
-6. **(Optional) Create a Glue Crawler (Target)**  
+6. **Create a Glue Crawler (Target)**  
    - If you want to query the final dataset via Athena, create a second crawler to scan the newly generated Parquet files in the *target* bucket.  
    - This crawler will create a new table in the Glue Data Catalog for the transformed dataset.
 
