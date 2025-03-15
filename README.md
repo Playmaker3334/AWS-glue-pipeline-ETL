@@ -64,24 +64,3 @@ This repository demonstrates an **ETL (Extract, Transform, Load)** pipeline usin
 
 7. **Query the Final Data**  
    - Use Athena to run queries against the new table to confirm your transformations.
-
-## Is Your Process Correct?
-
-Based on your description:
-- You **created two main buckets**: one for the source CSVs and one for the transformed (target) data. (Yes, correct)  
-- You **uploaded your sales and products CSV files** into the source bucket. (Yes, correct)  
-- You **created a Glue Crawler** for the source bucket, which automatically generated tables in the AWS Glue Data Catalog. (Correct)  
-- You **verified the table structure** in AWS Athena. (Correct)  
-- You **wrote a PySpark script** that reads from those tables, casts columns, joins them, calculates new fields (like `total_amount`), and **writes the final output in Parquet** to the target bucket. (Correct)  
-- You **ran a second crawler** (optional step) to index the output data in the target bucket, making it queryable in Athena. (Yes, correct)  
-- Finally, you **queried the transformed dataset** in Athena. (Correct)
-
-Your understanding is accurate. There are no major errors in your explanation—everything aligns well with typical AWS Glue ETL best practices.
-
-## Contributing
-
-If you find any issues or want to enhance this pipeline, feel free to open a pull request or file an issue.
-
-## License
-
-Add your chosen license here (e.g., MIT, Apache 2.0, etc.) if you want to share it publicly.
