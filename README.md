@@ -5,7 +5,7 @@ This repository demonstrates an **ETL (Extract, Transform, Load)** pipeline usin
 2. Crawl the data to automatically generate table schemas in the AWS Glue Data Catalog.  
 3. Transform and join data using a PySpark job in AWS Glue.  
 4. Write the transformed data (in Parquet format) to a target S3 bucket.  
-5. (Optional) Crawl the target bucket to register the new schema and query it with Athena.
+5. Crawl the target bucket to register the new schema and query it with Athena.
 
 ![Architecture Diagram](https://github.com/Playmaker3334/AWS-glue-pipeline-ETL/blob/main/architecture.png)
 
